@@ -23,7 +23,7 @@ export default function Home() {
       <CTA />
       <FAQ />
       <Footer />
-      <Button iconsize='36' textvisible={false} className='fixed bottom-5 right-5 z-40'/>
+      <Button iconsize='30' textvisible={false} className='fixed bottom-5 right-5 z-40'/>
     </main>
 
   );
