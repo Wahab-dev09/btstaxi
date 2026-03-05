@@ -57,7 +57,7 @@ const FAQ = () => {
     }, [faqclicked]);
 
     return (
-        <section className="w-full bg-white py-16 font-dm-sans">
+        <section className="w-full bg-white py-16 md:py-19 font-dm-sans">
             <div className="max-w-360 mx-auto px-3">
                 {/* Header */}
                 <div className="w-full flex flex-col justify-center items-center gap-6 2xl:gap-9 mb-12">

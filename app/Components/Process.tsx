@@ -7,7 +7,7 @@ import { process } from './WhyUsData';
 
 const Process = () => {
     return (
-        <section className="w-full bg-white overflow-clip py-12 lg:py-15 font-dm-sans relative">
+        <section className="w-full bg-white overflow-clip py-12 lg:py-17 font-dm-sans relative">
             <div className="max-w-360 mx-auto px-3 relative">
                 <div className="w-full flex flex-col justify-center items-center gap-6 2xl:gap-9 mb-12">
                     <h2 className="text-[32px] sm:text-[39px] 2xl:text-5xl font-medium max-w-60 sm:max-w-none tracking-tighter text-center text-neutral-900">
