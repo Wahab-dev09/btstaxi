@@ -21,7 +21,7 @@ const Hero = () => {
         { id: 3, image: person3 },
     ];
     return (
-        <section className='w-full max-w-360 pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 mt-40'>
+        <section className='w-full max-w-360 pb-15 lg:pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 mt-40'>
             <div className='w-fit bg-white/2 px-5 rounded-full py-2.5 border border-white/5 flex justify-center items-center gap-3 lg:mb-2'>
                 <MedalStarAlt fill='#FFDB63' />
                 <span className='text-white/90 text-sm 2xl:text-base font-light'>10+ Years of Reliable Airport Transfers</span>

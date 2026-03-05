@@ -23,7 +23,7 @@ const WhyUsCard = memo(
 
             {shownumber && <span>{index + 1}</span>}
 
-            {showIcon && <Icon size="md" pack='filled'/>}
+            {showIcon && <Icon className="w-6 h-6 md:w-8 md:h-8" pack='filled'/>}
 
           </div>
 

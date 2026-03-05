@@ -19,7 +19,7 @@ export default function ReviewCard({ item }: ReviewCardProps) {
   return (
     <div
       className="
-        shrink-0 w-[90%] max-w-[400px] h-[260px]
+        shrink-0 w-[90%] max-w-100 h-65
         bg-neutral-900 text-white rounded-2xl
         p-6 snap-center shadow
         hover:shadow-lg transition
