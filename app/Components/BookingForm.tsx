@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function BookingForm() {
     const [formData, setFormData] = useState({
         from: "",
+        airport: "",
         pickupDate: "",
         pickupTime: "",
         duration: "2",
@@ -35,19 +36,40 @@ export default function BookingForm() {
             {/* From Location */}
             <div className="flex flex-col gap-2">
                 <label className="text-sm text-white/70">From Location</label>
-                <input type="text" name="from" value={formData.from} onChange={handleChange} placeholder="Enter pickup location" className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required/>
+                <input type="text" name="from" value={formData.from} onChange={handleChange} placeholder="Enter pickup location" className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
+
+            {/* Select Airport */}
+            <div className="flex flex-col gap-2">
+                <label className="text-sm text-white/70">Select Airport</label>
+                <select
+                    name="airport"
+                    value={formData.airport}
+                    onChange={handleChange}
+                    className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition"
+                    required
+                >
+                    <option value="">Choose Airport</option>
+                    <option value="Gatwick Airport">Gatwick Airport</option>
+                    <option value="Heathrow Airport">Heathrow Airport</option>
+                    <option value="London City Airport">London City Airport</option>
+                    <option value="London Luton Airport">London Luton Airport</option>
+                    <option value="Stansted Airport">Stansted Airport</option>
+                    <option value="Southend Airport">Southend Airport</option>
+                </select>
+            </div>
+
 
             {/* Pickup Date */}
             <div className="flex flex-col gap-2">
                 <label className="text-sm text-white/70">Pickup Date</label>
-                <input type="date" name="pickupDate" value={formData.pickupDate} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required/>
+                <input type="date" name="pickupDate" value={formData.pickupDate} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
 
             {/* Pickup Time */}
             <div className="flex flex-col gap-2">
                 <label className="text-sm text-white/70">Pickup Time</label>
-                <input type="time" name="pickupTime" value={formData.pickupTime} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required/>
+                <input type="time" name="pickupTime" value={formData.pickupTime} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
 
             {/* Duration */}

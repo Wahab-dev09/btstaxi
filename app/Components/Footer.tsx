@@ -1,11 +1,11 @@
+'use client'
 import { Envelope, Phone } from '@boxicons/react'
 import Image from 'next/image'
 import Logo from "@/public/Images/logo.svg";
+import { navLinks, handleSmoothScroll } from './NavData';
 import React from 'react'
 
 const Footer = () => {
-    const navigationLinks = ["Home", "About", "Services", "Contact"];
-
     const legalLinks = ["Privacy Policy", "Terms & Conditions", "Refund Policy"];
     return (
         <footer className='w-full pt-13'>
@@ -30,10 +30,10 @@ const Footer = () => {
                 <div className='flex justify-center items-start gap-12'>
                     <div className='flex flex-col justify-start items-center md:items-end gap-5'>
                         <span className='text-white/80 tracking-tight text-base 2xl:text-lg hover:text-white font-medium'>Navigation</span>
-                        {navigationLinks.map((link, index) => (
-                            <span key={index} className='text-white/40 tracking-tight text-sm cursor-pointer 2xl:text-base hover:text-white'>
-                                {link}
-                            </span>
+                        {navLinks.map((link, index) => (
+                            <a key={index} href={link.href} onClick={(e) => handleSmoothScroll(e, link.href)} className='text-white/40 tracking-tight text-sm cursor-pointer 2xl:text-base hover:text-white'>
+                                {link.name}
+                            </a>
                         ))}
                     </div>
                     <div className='flex flex-col justify-start items-center md:items-end gap-5'>

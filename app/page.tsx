@@ -1,3 +1,4 @@
+import Button from './Components/Button'
 import Benefits from "./Components/Benefits";
 import Cars from "./Components/Cars";
 import CTA from "./Components/CTA";
@@ -16,12 +17,13 @@ export default function Home() {
       <Hero />
       <Reviews />
       <Process />
-      <Cars/>
+      <Cars />
       <Benefits />
       <Locations />
       <CTA />
       <FAQ />
-      <Footer/>
+      <Footer />
+      <Button iconsize='36' textvisible={false} className='fixed bottom-5 right-5 z-40'/>
     </main>
 
   );

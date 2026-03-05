@@ -9,7 +9,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BTSTAXI | On-Time Airport Taxi Transfers Across the UK",
+  title: "BtsTaxi | On-Time Airport Taxi Transfers Across the UK",
   description: "Reliable UK airport taxi transfers with professional drivers",
 };
 

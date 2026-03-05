@@ -64,7 +64,7 @@ const FAQ = () => {
                     <h2 className="text-[32px] sm:text-[39px] 2xl:text-5xl font-medium max-w-60 sm:max-w-none tracking-tighter text-center text-neutral-900">
                         Frequently Asked Questions
                     </h2>
-                    <p className="text-base 2xl:text-lg text-neutral-700 font-normal tracking-tight text-center max-w-95 sm:max-w-none">
+                    <p className="text-base 2xl:text-lg max-w-80 sm:max-w-none text-neutral-700 font-normal tracking-tight text-center">
                         Quick answers to the most common questions about our service
                     </p>
                 </div>
