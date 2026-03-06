@@ -12,7 +12,7 @@ const Footer = () => {
             <div className='w-[90%] max-w-350 mx-auto flex flex-col md:flex-row justify-start gap-15 md:gap-0 md:justify-between items-center'>
                 <div>
                     <div className='flex justify-center md:justify-start items-center gap-5 mb-5'>
-                        <Image src={Logo} width={60} height={60} alt='Logo' />
+                        <Image src={Logo} width={60} height={60} alt='BtsTaxi Logo' />
                         <h2 className='text-white text-[38px] sm:text-[44px] lg:text-[49px] xl:text-55xl font-bold tracking-tighter'>BTSTAXI</h2>
                     </div>
                     <p className='text-base 2xl:text-lg text-white/65 text-center md:text-left font-light max-w-80'>Reliable airport transfers across 6 major airports, booked in minutes</p>
