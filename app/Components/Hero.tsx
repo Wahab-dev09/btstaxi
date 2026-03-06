@@ -35,33 +35,10 @@ const Hero = () => {
             opacity: 0,
             duration: 0.9,
         })
-            .from(
-                textRef.current,
-                {
-                    y: 40,
-                    opacity: 0,
-                    duration: 0.8,
-                },
-                "-=0.6"
-            )
-            .from(
-                buttonRef.current,
-                {
-                    y: 30,
-                    opacity: 0,
-                    scale: 0.98,
-                    duration: 0.5,
-                },
-                "-=0.5"
-            )
-            .from(
-                gsap.utils.toArray(starsRef.current?.children ?? []),
-                {
-                    opacity: 0,
-                    scale: 0.5,
-                    stagger: 0.12,
-                    duration: 0.3,
-                });
+            .from(textRef.current,{ y: 40, opacity: 0, duration: 0.8,},"-=0.6")
+            .from(buttonRef.current,{ y: 30, opacity: 0, scale: 0.98, duration: 0.5,},"-=0.5")
+            .from(gsap.utils.toArray(starsRef.current?.children ?? []),
+                { opacity: 0, scale: 0.5, stagger: 0.12, duration: 0.3,});
     }, []);
     return (
         <section className='w-full relative max-w-360 pb-15 lg:pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 mt-40'>
@@ -83,9 +60,10 @@ const Hero = () => {
                                 key={person.id}
                                 className={`rounded-full border border-white ${index !== 0 ? "-ml-3" : ""}`}
                                 src={person.image}
+                                loading="lazy"
                                 width={36}
                                 height={36}
-                                alt="Customer"
+                                alt={`Customer ${person.id}`}
                             />
                         ))}
                         <span className='bg-yellow w-9 h-9 overflow-clip rounded-full border border-white -ml-3 text-neutral-950 text-xs font-medium flex justify-center items-center'>1.5K</span>
@@ -101,7 +79,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className='mt-8 w-full flex flex-col justify-center items-center gap-8'>
-                <span className='text-sm 2xl:text-base text-white/40 text-center'>Trusted by Our Customers Across UK</span>
+                <span className='text-sm 2xl:text-base text-white/50 text-center'>Trusted by Our Customers Across UK</span>
                 <MarqueeServices duration={40} reverse={false} />
 
             </div>

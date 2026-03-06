@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import Image from "next/image";
-import { airports } from "./LocationsData";
+import { airports } from "./MappingData";
 import { ChevronLeft, ChevronRight } from "@boxicons/react";
 import Button from './Button'
 
@@ -28,8 +28,8 @@ export default function AirportsCarousel() {
     return (
         <div className="w-[92%] max-w-360 mx-auto py-4 relative">
             {/* Arrows */}
-            <button onClick={() => scroll("left")} className="absolute cursor-pointer active:scale-95 left-3 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-2"><ChevronLeft size="md" /></button>
-            <button onClick={() => scroll("right")} className="absolute cursor-pointer active:scale-95 right-3 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-2"><ChevronRight size="md" /></button>
+            <button aria-label="Scroll left" onClick={() => scroll("left")} className="absolute cursor-pointer active:scale-95 left-3 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-2"><ChevronLeft size="md" /></button>
+            <button aria-label="Scroll right"  onClick={() => scroll("right")} className="absolute cursor-pointer active:scale-95 right-3 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md rounded-full p-2"><ChevronRight size="md" /></button>
 
             {/* Scroll Container */}
             <div
@@ -47,8 +47,8 @@ export default function AirportsCarousel() {
                             <Button text="Book this Ride"/>
                             </div>
                         </div>
-                        <Image src={airport.image} alt={airport.name} fill
-                            className="object-cover" />
+                        <Image src={airport.image} alt={airport.name} fill loading="lazy" className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"/>
                     </div>
                 ))}
             </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from './Button'
-import Proce from "@/public/Images/Process.webp";
+import TaxiProcess from "@/public/Images/Process.webp";
 import Image from 'next/image';
 import WhyUsCard from './WhyUsCard';
-import { process } from './WhyUsData';
+import { process } from './MappingData';
 
 const Process = () => {
     return (
@@ -23,10 +23,12 @@ const Process = () => {
                     <span className='absolute bottom-5 text-sm z-20 text-white/60 w-full text-center'>Serving Hundreds of Passengers Daily</span>
                     <div className='absolute z-10 w-full bottom-0 h-30 bg-linear-to-t from-black/80 to-transparent'></div>
                     <Image
-                        src={Proce}
+                        src={TaxiProcess}
                         className='object-center object-cover'
                         fill
-                        alt="Customer"
+                        sizes="(max-width: 640px) 100vw, 480px"
+                        loading="lazy"
+                        alt="Passenger walking near the taxi in UK"
                     />
                 </div>
                 <div className='w-full max-w-150 xl:max-w-180 flex flex-col justify-center items-start gap-5'>

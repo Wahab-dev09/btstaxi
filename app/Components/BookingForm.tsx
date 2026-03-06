@@ -22,7 +22,6 @@ export default function BookingForm() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(formData);
         // Change button text
         setSubmitted(true);
         // Reset after 3 seconds
@@ -41,8 +40,9 @@ export default function BookingForm() {
 
             {/* Select Airport */}
             <div className="flex flex-col gap-2">
-                <label className="text-sm text-white/70">Select Airport</label>
+                <label htmlFor="airport" className="text-sm text-white/70">Select Airport</label>
                 <select
+                    id="airport"
                     name="airport"
                     value={formData.airport}
                     onChange={handleChange}
@@ -62,20 +62,20 @@ export default function BookingForm() {
 
             {/* Pickup Date */}
             <div className="flex flex-col gap-2">
-                <label className="text-sm text-white/70">Pickup Date</label>
-                <input type="date" name="pickupDate" value={formData.pickupDate} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
+                <label htmlFor="pickupDate" className="text-sm text-white/70">Pickup Date</label>
+                <input id="pickupDate" type="date" name="pickupDate" value={formData.pickupDate} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
 
             {/* Pickup Time */}
             <div className="flex flex-col gap-2">
-                <label className="text-sm text-white/70">Pickup Time</label>
-                <input type="time" name="pickupTime" value={formData.pickupTime} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
+                <label htmlFor="pickupTime" className="text-sm text-white/70">Pickup Time</label>
+                <input id="pickupTime" type="time" name="pickupTime" value={formData.pickupTime} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
 
             {/* Duration */}
             <div className="flex flex-col gap-2">
-                <label className="text-sm text-white/70">Pickup In (Hours After Booking)</label>
-                <select name="duration" value={formData.duration} onChange={handleChange} className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition">
+                <label htmlFor="duration" className="text-sm text-white/70">Pickup In (Hours After Booking)</label>
+                <select id="duration" name="duration" value={formData.duration} onChange={handleChange} className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition">
                     {[...Array(23)].map((_, i) => {
                         const hour = i + 2; // 2hrs to 24hrs
                         return (<option key={hour} value={hour}>{hour} Hours</option>);
@@ -85,8 +85,8 @@ export default function BookingForm() {
 
             {/* Passengers */}
             <div className="flex flex-col gap-2">
-                <label className="text-sm text-white/70">Passengers</label>
-                <select name="passengers" value={formData.passengers} onChange={handleChange}
+                <label htmlFor="passengers" className="text-sm text-white/70">Passengers</label>
+                <select id="passengers" name="passengers" value={formData.passengers} onChange={handleChange}
                     className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                         <option key={num} value={num}>{num} {num === 1 ? "Passenger" : "Passengers"}</option>

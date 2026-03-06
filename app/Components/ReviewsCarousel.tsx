@@ -26,7 +26,6 @@ export default function ReviewsCarousel() {
                 const data = await res.json()
                 setReviews(data)
             } catch (error) {
-                console.error("Error fetching reviews:", error)
             } finally {
                 setLoading(false)
             }
@@ -63,12 +62,14 @@ export default function ReviewsCarousel() {
             {/* Arrows */}
             <button
                 onClick={() => scroll("left")}
+                  aria-label="Scroll left"
                 className="absolute left-2 top-1/2 -translate-y-1/2 bg-white border border-white cursor-pointer text-white rounded-full w-12 h-12 flex justify-center items-center z-10 hover:bg-white/90 transition"
             >
                 <ChevronLeft pack="filled" size="md" fill="#171717" />
             </button>
             <button
                 onClick={() => scroll("right")}
+                aria-label="Scroll right"
                 className="absolute right-2 top-1/2 -translate-y-1/2 bg-white border border-white cursor-pointer text-white rounded-full w-12 h-12 flex justify-center items-center z-10 hover:bg-white/90 transition"
             >
                 <ChevronRight pack="filled" size="md" fill="#171717" />

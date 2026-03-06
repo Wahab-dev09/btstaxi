@@ -1,9 +1,9 @@
 import React from "react";
 import Button from './Button'
-import Proce from "@/public/Images/whyus.webp";
+import WhyUs from "@/public/Images/whyus.webp";
 import Image from 'next/image';
 import WhyUsCard from './WhyUsCard';
-import { benefits, stats } from './WhyUsData';
+import { benefits, stats } from './MappingData';
 import WhyUsStat from "./WhyUsStat";
 import person1 from "@/public/Images/person1.png";
 import person2 from "@/public/Images/person2.png";
@@ -36,9 +36,10 @@ const Benefits = () => {
                                     key={person.id}
                                     className={`rounded-full border border-white ${index !== 0 ? "-ml-3" : ""}`}
                                     src={person.image}
+                                    loading="lazy"
                                     width={36}
                                     height={36}
-                                    alt="Customer"
+                                    alt={`Customer ${person.id}`}
                                 />
                             ))}
                             <span className='bg-yellow w-9 h-9 overflow-clip rounded-full border border-white -ml-3 text-neutral-950 text-xs font-medium flex justify-center items-center'>1.5K</span>
@@ -48,10 +49,12 @@ const Benefits = () => {
                     </div>
                     <div className='absolute z-10 w-full bottom-0 h-30 bg-linear-to-t from-black/80 to-transparent'></div>
                     <Image
-                        src={Proce}
+                        src={WhyUs}
                         className='object-center object-cover'
                         fill
-                        alt="Customer"
+                        sizes="(max-width: 640px) 100vw, 480px"
+                        loading="lazy"
+                        alt="Person getting out of Taxi Visual"
                     />
                 </div>
                 <div className='w-full max-w-150 xl:max-w-180 flex flex-col justify-center items-start gap-5'>
