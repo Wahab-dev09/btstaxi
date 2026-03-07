@@ -29,7 +29,7 @@ const Footer = () => {
         },
     ];
     return (
-        <footer className='w-full pt-13 bg-neutral-900'>
+        <footer className='w-full pt-13 bg-neutral-900 font-dm-sans'>
             <div className='w-[90%] max-w-350 mx-auto flex flex-col md:flex-row justify-start gap-15 md:gap-0 md:justify-between items-center md:items-start'>
                 <div>
                     <div className='flex justify-center md:justify-start items-center gap-5 mb-5'>

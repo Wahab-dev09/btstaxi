@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav aria-label="Main navigation"
+    <nav aria-label="Main navigation font-dms-ans"
       className={`w-full fixed z-50 px-3 bg-neutral-900 overflow-hidden duration-300 ${menuOpen ? 'max-h-95' : 'max-h-16.25 lg:max-h-20.5 '}
   `}
     >
