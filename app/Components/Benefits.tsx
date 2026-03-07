@@ -1,4 +1,3 @@
-import React from "react";
 import Button from './Button'
 import WhyUs from "@/public/Images/whyus.webp";
 import Image from 'next/image';

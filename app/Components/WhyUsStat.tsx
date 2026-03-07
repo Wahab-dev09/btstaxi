@@ -1,6 +1,6 @@
 'use client'
 import { memo} from 'react';
-import type { Stat } from './WhyUsData';
+import type { Stat } from './MappingData';
 
 
 const WhyUsStat = memo(({ stat }: { stat: Stat }) => {
