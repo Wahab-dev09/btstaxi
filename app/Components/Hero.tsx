@@ -29,19 +29,31 @@ const Hero = () => {
     const buttonRef = useRef<HTMLDivElement>(null);
     const starsRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+useEffect(() => {
+    // Reset all elements to their initial state first
+    gsap.set([headingRef.current, textRef.current, buttonRef.current], {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        clearProps: "all"
+    })
 
-        tl.from(headingRef.current, {
-            y: 60,
-            opacity: 0,
-            duration: 0.9,
-        })
-            .from(textRef.current,{ y: 40, opacity: 0, duration: 0.8,},"-=0.6")
-            .from(buttonRef.current,{ y: 30, opacity: 0, scale: 0.98, duration: 0.5,},"-=0.5")
-            .from(gsap.utils.toArray(starsRef.current?.children ?? []),
-                { opacity: 0, scale: 0.5, stagger: 0.12, duration: 0.3,});
-    }, []);
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.1 });
+
+    tl.from(headingRef.current, {
+        y: 60,
+        opacity: 0,
+        duration: 0.9,
+    })
+        .from(textRef.current, { y: 40, opacity: 0, duration: 0.8 }, "-=0.6")
+        .from(buttonRef.current, { y: 30, opacity: 0, scale: 0.98, duration: 0.5 }, "-=0.5")
+        .from(gsap.utils.toArray(starsRef.current?.children ?? []),
+            { opacity: 0, scale: 0.5, stagger: 0.12, duration: 0.3 });
+
+    return () => {
+        tl.kill()
+    }
+}, []);
     return (
         <section className='w-full relative max-w-360 bg-neutral-900 pb-15 lg:pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 pt-40'>
             <div className='w-fit bg-white/2 px-5 rounded-full py-2.5 border border-white/5 flex justify-center items-center gap-3 lg:mb-2'>
@@ -49,7 +61,7 @@ const Hero = () => {
                 <span className='text-white/90 text-sm 2xl:text-base font-light'>10+ Years of Reliable Airport Transfers</span>
             </div>
             <h1 ref={headingRef} className='text-white text-[41px] sm:text-5xl lg:text-[54px] xl:text-6xl 2xl:text-7xl font-medium tracking-tighter text-center leading-14 lg:leading-17 xl:leading-19 2xl:leading-22 max-w-125 sm:max-w-170 xl:max-w-190 2xl:max-w-220'><span className='text-yellow'>Bright Travel </span>Solutions for Transport Across the UK</h1>
-            <p ref={textRef} className='text-base 2xl:text-lg text-white/85 text-center font-light max-w-110 2xl:max-w-140'>Reliable transfers from across the UK to London’s major airports with transparent fares and 24/7 availability</p>
+            <p ref={textRef} className='text-base 2xl:text-lg text-white/85 text-center font-light max-w-110 2xl:max-w-140'>Comfortable and reliable transport across the UK with clear pricing and 24/7 service</p>
             <div className='w-full flex flex-col md:flex-row justify-center items-center mt-3 lg:mt-6 gap-9'>
                 <div ref={buttonRef}>
 

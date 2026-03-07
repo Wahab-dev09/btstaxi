@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -11,7 +9,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BtsTaxi | On-Time Airport Taxi Transfers Across the UK",
+  title: "BtsCars | On-Time Travelling Across the UK",
   description: "Reliable UK airport taxi transfers with professional drivers",
 };
 
@@ -23,9 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} antialiased`}>
-        <Navbar/>
         {children}
-        <Footer/>
       </body>
     </html>
   );

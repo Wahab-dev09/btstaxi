@@ -12,15 +12,15 @@ const FAQ = () => {
     const faqs = [
         {
             id: 1,
-            question: "How do I book an airport transfer?",
+            question: "How do I book an my ride?",
             answer:
-                "You can book your ride in minutes by selecting your airport, pickup location, and preferred time through our booking form.",
+                "You can book your ride in minutes by selecting your destination, pickup location, and preferred time through our booking form",
         },
         {
             id: 2,
-            question: "Which airports do you cover?",
+            question: "Do you provide transport across the UK or only in one city?",
             answer:
-                "We currently provide reliable airport transfers across 6 major London airports from all over the UK, ensuring timely pickups and drop-offs",
+                "We provide reliable transfers across the entire UK, from any city or town any pickup location or destination so you can travel anywhere with confidence",
         },
         {
             id: 3,

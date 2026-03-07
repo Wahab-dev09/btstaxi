@@ -36,7 +36,7 @@ const Footer = () => {
                         <Image src={Logo} width={60} height={60} alt='BtsTaxi Logo' />
                         <h2 className='text-white text-[38px] sm:text-[44px] lg:text-[49px] xl:text-55xl font-bold tracking-tighter'>BTSCARS</h2>
                     </div>
-                    <p className='text-base 2xl:text-lg text-white/65 text-center md:text-left font-light max-w-80'>Reliable airport transfers across 6 major airports, booked in minutes</p>
+                    <p className='text-base 2xl:text-lg text-white/65 text-center md:text-left font-light max-w-80'>Your trusted choice for reliable transport across the UK whenever you travel</p>
                     <div className='flex flex-col justify-start items-center md:items-start gap-5 mt-8'>
                         {contacts.map((contact, index) => {
                             const IconComponent = contact.icon;
@@ -77,7 +77,7 @@ const Footer = () => {
 
                 </div>
             </div>
-            <p className='text-center pb-5 pt-13 text-sm 2xl:text-base text-white/60 tracking-tight'> © 2026 Airport Transfers. All rights reserved</p>
+            <p className='text-center pb-5 pt-13 text-sm 2xl:text-base text-white/60 tracking-tight'>© 2026 Bright Travel Solutions Ltd</p>
         </footer>
     )
 }

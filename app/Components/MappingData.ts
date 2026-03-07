@@ -65,7 +65,7 @@ export const cars: Cars[] = [
 
 // Process data
 export const process: Card[] = [
-  { title: "Choose Pickup & Airport", tagline: "Select your pickup location and the airport you're traveling to", image: Bolt },
+  { title: "Choose Pickup & Destination", tagline: "Select your pickup location and the destination you're traveling to", image: Bolt },
   { title: "Confirm Ride via WhatsApp", tagline: "Hit the WhatsApp button to confirm your booking instantly", image: DollarCircle },
   { title: "Meet Your Driver", tagline: "Our professional driver picks you up on time and drives you safely", image: Clock4 },
 ];
@@ -73,7 +73,7 @@ export const process: Card[] = [
 // Benefits data
 export const benefits: Card[] = [
   { title: "Instant Car Booking", tagline: "No long forms, no waiting. Confirm quickly and your driver is on the way", image: Bolt },
-  { title: "Affordable Pricing", tagline: "Clear upfront fares with no hidden charges. Premium airport transfers within reach", image: DollarCircle },
+  { title: "Affordable Pricing", tagline: "Clear upfront fares with no hidden charges. Premium transfers within reach", image: DollarCircle },
   { title: "Available 24/7", tagline: "Early morning flight or late-night arrival, we are ready whenever you are", image: Clock4 },
 ];
 

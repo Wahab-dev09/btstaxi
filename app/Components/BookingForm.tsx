@@ -3,11 +3,13 @@ import { useState } from "react";
 export default function BookingForm() {
     const [formData, setFormData] = useState({
         from: "",
+        to: "",
         airport: "",
         pickupDate: "",
         pickupTime: "",
         duration: "2",
         passengers: "1",
+        luggage: "1",
     });
 
     const [submitted, setSubmitted] = useState(false);
@@ -32,14 +34,19 @@ export default function BookingForm() {
         <form
             onSubmit={handleSubmit}
             className="w-full max-w-125 mx-auto border border-white/4 text-white rounded-2xl p-4 py-7 sm:p-6 md:p-8 flex flex-col gap-5 shadow-xl">
+            {/* Pickup Location */}
+            <div className="flex flex-col gap-2">
+                <label className="text-sm text-white/70">Pickup Location</label>
+                <input type="text" name="from" value={formData.from} onChange={handleChange} placeholder="Enter pickup location" className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
+            </div>
             {/* From Location */}
             <div className="flex flex-col gap-2">
-                <label className="text-sm text-white/70">From Location</label>
-                <input type="text" name="from" value={formData.from} onChange={handleChange} placeholder="Enter pickup location" className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
+                <label className="text-sm text-white/70">Dropoff Location</label>
+                <input type="text" name="from" value={formData.to} onChange={handleChange} placeholder="Enter Dropoff location" className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
 
             {/* Select Airport */}
-            <div className="flex flex-col gap-2">
+            {/* <div className="flex flex-col gap-2">
                 <label htmlFor="airport" className="text-sm text-white/70">Select Airport</label>
                 <select
                     id="airport"
@@ -57,7 +64,7 @@ export default function BookingForm() {
                     <option value="Stansted Airport">Stansted Airport</option>
                     <option value="Southend Airport">Southend Airport</option>
                 </select>
-            </div>
+            </div> */}
 
 
             {/* Pickup Date */}
@@ -73,7 +80,7 @@ export default function BookingForm() {
             </div>
 
             {/* Duration */}
-            <div className="flex flex-col gap-2">
+            {/* <div className="flex flex-col gap-2">
                 <label htmlFor="duration" className="text-sm text-white/70">Pickup In (Hours After Booking)</label>
                 <select id="duration" name="duration" value={formData.duration} onChange={handleChange} className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition">
                     {[...Array(23)].map((_, i) => {
@@ -81,7 +88,7 @@ export default function BookingForm() {
                         return (<option key={hour} value={hour}>{hour} Hours</option>);
                     })}
                 </select>
-            </div>
+            </div> */}
 
             {/* Passengers */}
             <div className="flex flex-col gap-2">
@@ -93,10 +100,20 @@ export default function BookingForm() {
                     ))}
                 </select>
             </div>
+            {/* Luggage */}
+            <div className="flex flex-col gap-2">
+                <label htmlFor="luggage" className="text-sm text-white/70">Luggage</label>
+                <select id="luggage" name="luggage" value={formData.luggage} onChange={handleChange}
+                    className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition">
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 12, 16].map((num) => (
+                        <option key={num} value={num}>{num} {num === 1 ? "bag" : "bags"}</option>
+                    ))}
+                </select>
+            </div>
 
             {/* Submit Button */}
             <button type="submit" className=" mt-3 bg-yellow cursor-pointer text-neutral-900 rounded-xl py-3 font-medium hover:bg-yellow-200 transition">
-                {submitted ? "Booked! Check your inbox" : "See Prices"}
+                {submitted ? "Booked! Check your inbox" : "Book Your Ride"}
             </button>
         </form>
     );

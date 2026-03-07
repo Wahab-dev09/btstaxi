@@ -20,7 +20,7 @@ const Benefits = () => {
             <div className="max-w-360 mx-auto px-3 relative">
                 <div className="w-full flex flex-col justify-center items-center gap-6 2xl:gap-9 mb-12">
                     <h2 className="text-[32px] sm:text-[39px] 2xl:text-5xl font-medium max-w-60 sm:max-w-none tracking-tighter text-center text-neutral-900">Why People Pick Us</h2>
-                    <p className="text-base 2xl:text-lg text-neutral-700 max-w-80 font-normal tracking-tight text-center sm:max-w-none">From booking to pickup, we make your airport transfer hassle-free and reliable</p>
+                    <p className="text-base 2xl:text-lg text-neutral-700 max-w-80 font-normal tracking-tight text-center sm:max-w-none">A trusted choice for safe, comfortable, and reliable travel across the UK</p>
                 </div>
             </div>
             <div className='w-full max-w-360 mx-auto flex flex-col lg:flex-row justify-center items-center gap-7 px-3 mb-12'>

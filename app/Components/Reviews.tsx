@@ -11,7 +11,7 @@ export default function Reviews() {
                 <h2 className="text-[33px] sm:text-[39px] 2xl:text-5xl font-medium max-w-65 sm:max-w-none tracking-tighter text-center text-neutral-900">
                     Top Rated Choice on Google
                 </h2>
-                <p className="text-base 2xl:text-lg text-neutral-700 max-w-80 font-normal text-center tracking-tight">Trusted by thousands of passengers for reliable airport rides across the UK</p>
+                <p className="text-base 2xl:text-lg text-neutral-700 max-w-80 font-normal text-center tracking-tight">Trusted by thousands of passengers for reliable travel across the UK</p>
                 </div>
 
                 <ReviewsCarousel />

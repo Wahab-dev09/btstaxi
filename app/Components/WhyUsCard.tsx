@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import Image from 'next/image';
 import type { Card } from './MappingData';
-import { Location } from '@boxicons/react';
+
 
 interface WhyUsCardProps {
   card: Card;

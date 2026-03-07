@@ -13,7 +13,7 @@ const Process = () => {
                     <h2 className="text-[32px] sm:text-[39px] 2xl:text-5xl font-medium max-w-60 sm:max-w-none tracking-tighter text-center text-neutral-900">
                         Book Your Ride in <span className='bg-neutral-900 text-yellow px-5 py-2.5 rounded-lg leading-19 sm:leading-none'>3 Easy Steps</span>
                     </h2>
-                    <p className="text-base 2xl:text-lg text-neutral-700 font-normal tracking-tight text-center max-w-80 sm:max-w-none">From booking to pickup, we make your airport transfer hassle-free and reliable</p>
+                    <p className="text-base 2xl:text-lg text-neutral-700 font-normal tracking-tight text-center max-w-80 sm:max-w-none">From booking to pickup, we make your journey simple, reliable, and hassle-free</p>
                 </div>
             </div>
             <div className='w-full max-w-360 mx-auto flex flex-col lg:flex-row justify-center items-center gap-7 px-3 mb-8'>
