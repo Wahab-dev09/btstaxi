@@ -8,6 +8,7 @@ import Image from 'next/image'
 import person1 from "@/public/Images/person1.png";
 import person2 from "@/public/Images/person2.png";
 import person3 from "@/public/Images/person3.png";
+
 import dynamic from "next/dynamic";
 
 const MarqueeServices = dynamic(() => import("./Marquee"), {
@@ -16,6 +17,7 @@ const MarqueeServices = dynamic(() => import("./Marquee"), {
 });
 
 const Hero = () => {
+
     const stars = Array.from({ length: 5 });
     const people = [
         { id: 1, image: person1 },
@@ -41,12 +43,12 @@ const Hero = () => {
                 { opacity: 0, scale: 0.5, stagger: 0.12, duration: 0.3,});
     }, []);
     return (
-        <section className='w-full relative max-w-360 pb-15 lg:pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 mt-40'>
+        <section className='w-full relative max-w-360 bg-neutral-900 pb-15 lg:pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 pt-40'>
             <div className='w-fit bg-white/2 px-5 rounded-full py-2.5 border border-white/5 flex justify-center items-center gap-3 lg:mb-2'>
                 <MedalStarAlt fill='#FFDB63' />
                 <span className='text-white/90 text-sm 2xl:text-base font-light'>10+ Years of Reliable Airport Transfers</span>
             </div>
-            <h1 ref={headingRef} className='text-white text-[42px] sm:text-5xl lg:text-[54px] xl:text-6xl 2xl:text-7xl font-medium tracking-tight text-center leading-14 lg:leading-17 xl:leading-19 2xl:leading-22 max-w-125 sm:max-w-150 xl:max-w-170 2xl:max-w-200'><span className='text-yellow'>On-Time </span>Taxi Transfers to London's Airports</h1>
+            <h1 ref={headingRef} className='text-white text-[41px] sm:text-5xl lg:text-[54px] xl:text-6xl 2xl:text-7xl font-medium tracking-tighter text-center leading-14 lg:leading-17 xl:leading-19 2xl:leading-22 max-w-125 sm:max-w-170 xl:max-w-190 2xl:max-w-220'><span className='text-yellow'>Bright Travel </span>Solutions for Transport Across the UK</h1>
             <p ref={textRef} className='text-base 2xl:text-lg text-white/85 text-center font-light max-w-110 2xl:max-w-140'>Reliable transfers from across the UK to London’s major airports with transparent fares and 24/7 availability</p>
             <div className='w-full flex flex-col md:flex-row justify-center items-center mt-3 lg:mt-6 gap-9'>
                 <div ref={buttonRef}>

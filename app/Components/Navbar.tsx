@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         <div className='flex opacity-100 justify-start items-center gap-12 lg:w-70'>
           <Link href="/" className="flex items-center gap-2.5" aria-label="Go to homepage">
             <Image className='h-auto' width={30} height={30} src={Logo} loading='lazy' alt='BtsTaxi Logo' />
-            <span className={`text-base font-bold lg:text-lg 2xl:text-xl font-boldonse text-white uppercase`}>BTSTAXI</span>
+            <span className={`text-base font-bold lg:text-lg 2xl:text-xl font-boldonse text-white uppercase`}>BTSCARS</span>
           </Link>
 
         </div>

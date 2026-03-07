@@ -1,3 +1,4 @@
+
 import Button from './Components/Button'
 import Benefits from "./Components/Benefits";
 import Cars from "./Components/Cars";
@@ -8,9 +9,11 @@ import Hero from "./Components/Hero";
 import Locations from "./Components/Locations";
 import Navbar from "./Components/Navbar";
 import Process from "./Components/Process";
+
 import Reviews from "./Components/Reviews";
 
 export default function Home() {
+
   return (
     <main className="w-full flex flex-col justify-start items-center font-dm-sans">
       <Navbar />
@@ -22,8 +25,8 @@ export default function Home() {
       <Locations />
       <CTA />
       <FAQ />
-      <Footer />
-      <Button iconsize='30' textvisible={false} className='fixed bottom-5 right-5 z-40'/>
+      {/* <Footer /> */}
+      <Button iconsize='30' textvisible={false} className='fixed bottom-5 right-5 z-40' />
     </main>
 
   );
