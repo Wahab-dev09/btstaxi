@@ -8,7 +8,9 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
     return (
         <div className="w-[90%] max-w-4xl mx-auto py-16 text-white/80">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-white mb-3">Privacy Policy</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-white mb-3">
+                Privacy Policy
+            </h1>
             <p className="text-white/40 text-sm mb-12">Last updated: January 2026</p>
 
             <div className="space-y-10 text-base leading-relaxed font-light">
@@ -25,27 +27,38 @@ export default function PrivacyPolicyPage() {
                 <section>
                     <h2 className="text-xl font-semibold text-white mb-3">2. Information We Collect</h2>
                     <p className="mb-3">We may collect the following categories of personal information:</p>
-                    <ul className="list-disc list-inside space-y-2 text-white/60 pl-3">
-                        <li><span className="text-white/80">Identity Data</span> – name, title, date of birth</li>
-                        <li><span className="text-white/80">Contact Data</span> – billing address, delivery address, email address, and phone numbers</li>
-                        <li><span className="text-white/80">Transaction Data</span> – details about payments and the services you have purchased from us</li>
-                        <li><span className="text-white/80">Technical Data</span> – IP address, browser type and version, time zone, browser plug-in types</li>
-                        <li><span className="text-white/80">Usage Data</span> – information about how you use our website and services</li>
-                        <li><span className="text-white/80">Journey Data</span> – pick-up and drop-off locations, flight numbers, and travel preferences</li>
-                    </ul>
+                    <div className="flex flex-col gap-2 text-white/60">
+                        <p className="text-white/90">Identity Data</p>
+                        <p>Name, title, date of birth</p>
+
+                        <p className="text-white/90">Contact Data</p>
+                        <p>Billing address, delivery address, email address, and phone numbers</p>
+
+                        <p className="text-white/90">Transaction Data</p>
+                        <p>Details about payments and the services you have purchased from us</p>
+
+                        <p className="text-white/90">Technical Data</p>
+                        <p>IP address, browser type and version, time zone, browser plug-in types</p>
+
+                        <p className="text-white/90">Usage Data</p>
+                        <p>Information about how you use our website and services</p>
+
+                        <p className="text-white/90">Journey Data</p>
+                        <p>Pick-up and drop-off locations, flight numbers, and travel preferences</p>
+                    </div>
                 </section>
 
                 <section>
                     <h2 className="text-xl font-semibold text-white mb-3">3. How We Use Your Information</h2>
                     <p className="mb-3">We use the information we collect in the following ways:</p>
-                    <ul className="list-disc list-inside space-y-2 text-white/60 pl-3">
-                        <li>To process and fulfil your booking requests</li>
-                        <li>To send you booking confirmations and service updates</li>
-                        <li>To communicate with you about your journey or account</li>
-                        <li>To improve our website and service offering</li>
-                        <li>To comply with legal obligations</li>
-                        <li>To prevent fraud and ensure the safety of our platform</li>
-                    </ul>
+                    <div className="flex flex-wrap gap-2 text-white/60">
+                        <span>To process and fulfil your booking requests</span>
+                        <span>To send you booking confirmations and service updates</span>
+                        <span>To communicate with you about your journey or account</span>
+                        <span>To improve our website and service offering</span>
+                        <span>To comply with legal obligations</span>
+                        <span>To prevent fraud and ensure the safety of our platform</span>
+                    </div>
                 </section>
 
                 <section>
@@ -76,15 +89,23 @@ export default function PrivacyPolicyPage() {
                 <section>
                     <h2 className="text-xl font-semibold text-white mb-3">7. Your Rights</h2>
                     <p className="mb-3">Under applicable data protection law, you have the right to:</p>
-                    <ul className="list-disc list-inside space-y-2 text-white/60 pl-3">
-                        <li>Access your personal data</li>
-                        <li>Correct inaccurate personal data</li>
-                        <li>Request erasure of your personal data</li>
-                        <li>Object to or restrict processing of your personal data</li>
-                        <li>Request the transfer of your personal data</li>
-                        <li>Withdraw consent at any time</li>
-                    </ul>
-                    <p className="mt-3">To exercise any of these rights, please contact us at <span className="text-[#FFDB63]">contact@airporttransfer.com</span>.</p>
+                    <div className="flex flex-wrap gap-2 text-white/60">
+                        <span>Access your personal data</span>
+                        <span>Correct inaccurate personal data</span>
+                        <span>Request erasure of your personal data</span>
+                        <span>Object to or restrict processing of your personal data</span>
+                        <span>Request the transfer of your personal data</span>
+                        <span>Withdraw consent at any time</span>
+                    </div>
+                    <p className="mt-3">
+                        To exercise any of these rights, please contact us at{' '}
+                        <a target="_blank" rel="noopener noreferrer"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com"
+                            className="text-yellow hover:underline"
+                        >
+                            btsminicabs@gmail.com
+                        </a>
+                    </p>
                 </section>
 
                 <section>
@@ -105,10 +126,14 @@ export default function PrivacyPolicyPage() {
 
                 <section>
                     <h2 className="text-xl font-semibold text-white mb-3">10. Contact Us</h2>
-                    <p>
-                        If you have questions or concerns about this Privacy Policy, please contact us at:<br />
-                        <span className="text-[#FFDB63]">contact@airporttransfer.com</span><br />
-                        Bright Travel Solutions Ltd, United Kingdom
+                    <p className="mt-3">
+                        To exercise any of these rights, please contact us at{' '}
+                        <a target="_blank" rel="noopener noreferrer"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com"
+                            className="text-yellow hover:underline"
+                        >
+                            btsminicabs@gmail.com
+                        </a>.
                     </p>
                 </section>
 

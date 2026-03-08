@@ -57,13 +57,13 @@ export default function ReviewsCarousel() {
         )
 
     return (
-        <div className="relative">
+        <div className="relative  w-full">
 
             {/* Arrows */}
             <button
                 ref={prevRef}
                 aria-label="Scroll left"
-                className="absolute border border-black/10 left-2 top-1/2 -translate-y-1/2 bg-white  cursor-pointer rounded-full w-12 h-12 flex justify-center items-center z-10 hover:bg-white/90 transition"
+                className="absolute border border-black/10 left-0 top-1/2 -translate-y-1/2 bg-white  cursor-pointer rounded-full w-12 h-12 flex justify-center items-center z-10 hover:bg-white/90 transition"
             >
                 <ChevronLeft pack="filled" size="md" fill="#171717" />
             </button>
@@ -71,14 +71,15 @@ export default function ReviewsCarousel() {
             <button
                 ref={nextRef}
                 aria-label="Scroll right"
-                className="absolute border border-black/10 right-2 top-1/2 -translate-y-1/2 bg-white cursor-pointer rounded-full w-12 h-12 flex justify-center items-center z-10 hover:bg-white/90 transition"
+                className="absolute border border-black/10 right-0 top-1/2 -translate-y-1/2 bg-white cursor-pointer rounded-full w-12 h-12 flex justify-center items-center z-10 hover:bg-white/90 transition"
             >
                 <ChevronRight pack="filled" size="md" fill="#171717" />
             </button>
 
             <Swiper
+                className="px-4! md:px-6!"
                 modules={[Navigation, Autoplay]}
-                spaceBetween={1}
+                spaceBetween={24}
                 slidesPerGroup={1}
 
                 autoplay={{
@@ -97,17 +98,19 @@ export default function ReviewsCarousel() {
                     // @ts-ignore
                     swiper.params.navigation.nextEl = nextRef.current
                 }}
-
                 breakpoints={{
                     0: { slidesPerView: 1 },
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
+                    640: { slidesPerView: "auto" },
+                    1024: { slidesPerView: "auto" },
                 }}
             >
                 {Array.isArray(reviews) ? (
                     reviews.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <ReviewCard item={item}/>
+                        <SwiperSlide
+                            key={item.id}
+                            className="w-full! sm:w-90! lg:w-100px!"
+                        >
+                            <ReviewCard item={item} />
                         </SwiperSlide>
                     ))
                 ) : (

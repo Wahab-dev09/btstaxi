@@ -16,16 +16,19 @@ const Footer = () => {
             type: "Email",
             icon: Envelope,
             value: "contact@airporttransfer.com",
+            link: "https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com",
         },
         {
             type: "Phone Number",
             icon: Mobile,
             value: "+447368877853",
+            link: "https://api.whatsapp.com/send?phone=447368877853",
         },
         {
             type: "Landline Number",
             icon: Phone,
             value: "+442039166364",
+            link: "tel:+442039166364",
         },
     ];
     return (
@@ -41,7 +44,7 @@ const Footer = () => {
                         {contacts.map((contact, index) => {
                             const IconComponent = contact.icon;
                             return (
-                                <div
+                                <a href={contact.link} target="_blank" rel="noopener noreferrer"
                                     key={index}
                                     className="flex justify-center items-center cursor-pointer group hover:bg-white/4 gap-3 bg-white/2 text-white border border-white/5 px-3 py-2 rounded-full"
                                 >
@@ -52,7 +55,7 @@ const Footer = () => {
                                     <span className="text-white/50  group-hover:text-white/80 font-normal tracking-wide text-sm 2xl:text-base">
                                         {contact.value}
                                     </span>
-                                </div>
+                                </a>
                             );
                         })}
                     </div>

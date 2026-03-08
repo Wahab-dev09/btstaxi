@@ -16,10 +16,12 @@ export default function BookingForm() {
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
     ) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
+        const { name, value } = e.target;
+
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
     };
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -39,33 +41,11 @@ export default function BookingForm() {
                 <label className="text-sm text-white/70">Pickup Location</label>
                 <input type="text" name="from" value={formData.from} onChange={handleChange} placeholder="Enter pickup location" className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
-            {/* From Location */}
+            {/* To Location */}
             <div className="flex flex-col gap-2">
                 <label className="text-sm text-white/70">Dropoff Location</label>
-                <input type="text" name="from" value={formData.to} onChange={handleChange} placeholder="Enter Dropoff location" className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
+                <input type="text" name="to" value={formData.to} onChange={handleChange} placeholder="Enter Dropoff location" className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
-
-            {/* Select Airport */}
-            {/* <div className="flex flex-col gap-2">
-                <label htmlFor="airport" className="text-sm text-white/70">Select Airport</label>
-                <select
-                    id="airport"
-                    name="airport"
-                    value={formData.airport}
-                    onChange={handleChange}
-                    className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition"
-                    required
-                >
-                    <option value="">Choose Airport</option>
-                    <option value="Gatwick Airport">Gatwick Airport</option>
-                    <option value="Heathrow Airport">Heathrow Airport</option>
-                    <option value="London City Airport">London City Airport</option>
-                    <option value="London Luton Airport">London Luton Airport</option>
-                    <option value="Stansted Airport">Stansted Airport</option>
-                    <option value="Southend Airport">Southend Airport</option>
-                </select>
-            </div> */}
-
 
             {/* Pickup Date */}
             <div className="flex flex-col gap-2">
@@ -78,17 +58,6 @@ export default function BookingForm() {
                 <label htmlFor="pickupTime" className="text-sm text-white/70">Pickup Time</label>
                 <input id="pickupTime" type="time" name="pickupTime" value={formData.pickupTime} onChange={handleChange} className="bg-neutral-800 w-full border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition" required />
             </div>
-
-            {/* Duration */}
-            {/* <div className="flex flex-col gap-2">
-                <label htmlFor="duration" className="text-sm text-white/70">Pickup In (Hours After Booking)</label>
-                <select id="duration" name="duration" value={formData.duration} onChange={handleChange} className="bg-neutral-800 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow transition">
-                    {[...Array(23)].map((_, i) => {
-                        const hour = i + 2; // 2hrs to 24hrs
-                        return (<option key={hour} value={hour}>{hour} Hours</option>);
-                    })}
-                </select>
-            </div> */}
 
             {/* Passengers */}
             <div className="flex flex-col gap-2">

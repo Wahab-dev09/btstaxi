@@ -18,8 +18,8 @@ const Benefits = () => {
     return (
         <section id="benefits" className="w-full bg-white overflow-clip py-8 lg:py-15 font-dm-sans relative">
             <div className="max-w-360 mx-auto px-3 relative">
-                <div className="w-full flex flex-col justify-center items-center gap-3 2xl:gap-9 mb-12">
-                    <h2 className="text-3xl sm:text-[39px] 2xl:text-5xl font-medium max-w-70 sm:max-w-none tracking-tighter text-center text-neutral-900">Why People Pick Us</h2>
+                <div className="w-full flex flex-col justify-center items-center gap-2 2xl:gap-9 mb-12">
+                    <h2 className="text-[25px] sm:text-[39px] 2xl:text-5xl font-medium tracking-tighter text-center text-neutral-900">Why People Pick Us</h2>
                     <p className="text-base 2xl:text-lg text-neutral-700 max-w-80 font-normal tracking-tight text-center sm:max-w-none">A trusted choice for safe, comfortable, and reliable travel across the UK</p>
                 </div>
             </div>

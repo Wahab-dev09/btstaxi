@@ -60,8 +60,8 @@ const FAQ = () => {
         <section className="w-full bg-white py-16 md:py-19 font-dm-sans">
             <div className="max-w-360 mx-auto px-3">
                 {/* Header */}
-                <div className="w-full flex flex-col justify-center items-center gap-3 2xl:gap-9 mb-12">
-                    <h2 className="text-3xl sm:text-[39px] 2xl:text-5xl font-medium max-w-60 sm:max-w-none tracking-tighter text-center text-neutral-900">
+                <div className="w-full flex flex-col justify-center items-center gap-2 2xl:gap-9 mb-12">
+                    <h2 className="text-[25px] sm:text-[39px] 2xl:text-5xl font-medium tracking-tighter text-center text-neutral-900">
                         Frequently Asked Questions
                     </h2>
                     <p className="text-base 2xl:text-lg max-w-80 sm:max-w-none text-neutral-700 font-normal tracking-tight text-center">

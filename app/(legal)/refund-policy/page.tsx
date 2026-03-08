@@ -57,7 +57,7 @@ export default function RefundPolicyPage() {
                 <section>
                     <h2 className="text-xl font-semibold text-white mb-3">3. How to Cancel</h2>
                     <p>
-                        All cancellation requests must be submitted in writing by emailing <span className="text-[#FFDB63]">contact@airporttransfer.com</span> with your booking reference number.
+                        All cancellation requests must be submitted in writing by emailing <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com" className="text-yellow hover:underline"> btsminicabs@gmail.com </a> with your booking reference number.
                         Cancellations are not accepted by phone. The cancellation time is recorded as the time we receive your written request.
                     </p>
                 </section>
@@ -81,12 +81,10 @@ export default function RefundPolicyPage() {
                 <section>
                     <h2 className="text-xl font-semibold text-white mb-3">6. Non-Refundable Items</h2>
                     <p className="mb-3">The following charges are non-refundable under any circumstances:</p>
-                    <ul className="list-disc list-inside space-y-2 text-white/60 pl-3">
-                        <li>Waiting time charges already incurred</li>
-                        <li>Additional stops or detours already completed</li>
-                        <li>Tolls, parking, or congestion charges already paid on your behalf</li>
-                        <li>Booking amendment fees</li>
-                    </ul>
+                    <p>Waiting time charges already incurred</p>
+                    <p>Additional stops or detours already completed</p>
+                    <p>Tolls, parking, or congestion charges already paid on your behalf</p>
+                    <p>Booking amendment fees</p>
                 </section>
 
                 <section>
@@ -100,7 +98,7 @@ export default function RefundPolicyPage() {
                 <section>
                     <h2 className="text-xl font-semibold text-white mb-3">8. Disputes</h2>
                     <p>
-                        If you are unhappy with a refund decision, please contact us directly at <span className="text-[#FFDB63]">contact@airporttransfer.com</span>.
+                        If you are unhappy with a refund decision, please contact us directly at  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com" target="_blank" rel="noopener noreferrer" className="text-yellow hover:underline"> btsminicabs@gmail.com </a>.
                         We aim to resolve all disputes fairly and promptly. If we are unable to reach a resolution, you may escalate the matter through the appropriate UK consumer dispute resolution channels.
                     </p>
                 </section>
@@ -109,8 +107,13 @@ export default function RefundPolicyPage() {
                     <h2 className="text-xl font-semibold text-white mb-3">9. Contact Us</h2>
                     <p>
                         For any refund-related queries, reach us at:<br />
-                        <span className="text-yellow">contact@airporttransfer.com</span><br />
-                        <span className="text-yellow">+44 7368 877853</span><br />
+                        <a target="_blank" rel="noopener noreferrer"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com"
+                            className="text-yellow hover:underline"
+                        >
+                            btsminicabs@gmail.com
+                        </a><br />
+                        <a target="_blank" rel="noopener noreferrer" href='https://api.whatsapp.com/send?phone=447368877853' className="text-yellow-400 hover:underline">+44 7368 877853</a><br />
                         Bright Travel Solutions Ltd, United Kingdom
                     </p>
                 </section>

@@ -45,7 +45,7 @@ export default function TermsOfUsePage() {
                 <section>
                     <h2 className="text-xl font-semibold text-white mb-3">4. Cancellations & Amendments</h2>
                     <p className="mb-3">
-                        You may cancel or amend your booking in accordance with our Refund Policy. Cancellations must be submitted in writing to <span className="text-[#FFDB63]">contact@airporttransfer.com</span>.
+                        You may cancel or amend your booking in accordance with our Refund Policy. Cancellations must be submitted in writing to <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com" className="text-yellow hover:underline"> btsminicabs@gmail.com </a>.
                     </p>
                     <p>
                         BTSCARS reserves the right to cancel or modify a booking in exceptional circumstances such as severe weather, vehicle breakdown, or force majeure.
@@ -101,7 +101,7 @@ export default function TermsOfUsePage() {
                     <h2 className="text-xl font-semibold text-white mb-3">10. Contact Us</h2>
                     <p>
                         For questions regarding these Terms & Conditions, please contact us:<br />
-                        <span className="text-[#FFDB63]">contact@airporttransfer.com</span><br />
+                        <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com" className="text-yellow hover:underline"> btsminicabs@gmail.com </a><br />
                         Bright Travel Solutions Ltd, United Kingdom
                     </p>
                 </section>
