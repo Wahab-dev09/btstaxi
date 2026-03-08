@@ -10,7 +10,7 @@ const Process = () => {
         <section id='process' className="w-full bg-white overflow-clip py-12 lg:py-17 font-dm-sans relative">
             <div className="max-w-360 mx-auto px-3 relative">
                 <div className="w-full flex flex-col justify-center items-center gap-6 2xl:gap-9 mb-12">
-                    <h2 className="text-[32px] sm:text-[39px] 2xl:text-5xl font-medium max-w-60 sm:max-w-none tracking-tighter text-center text-neutral-900">
+                    <h2 className="text-3xl sm:text-[39px] 2xl:text-5xl font-medium max-w-60 sm:max-w-none tracking-tighter text-center text-neutral-900">
                         Book Your Ride in <span className='bg-neutral-900 text-yellow px-5 py-2.5 rounded-lg leading-19 sm:leading-none'>3 Easy Steps</span>
                     </h2>
                     <p className="text-base 2xl:text-lg text-neutral-700 font-normal tracking-tight text-center max-w-80 sm:max-w-none">From booking to pickup, we make your journey simple, reliable, and hassle-free</p>

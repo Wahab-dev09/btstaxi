@@ -55,13 +55,13 @@ useEffect(() => {
     }
 }, []);
     return (
-        <section className='w-full relative max-w-360 bg-neutral-900 pb-15 lg:pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 pt-40'>
+        <section className='w-full relative bg-neutral-900 pb-15 lg:pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 pt-40'>
             <div className='w-fit bg-white/2 px-5 rounded-full py-2.5 border border-white/5 flex justify-center items-center gap-3 lg:mb-2'>
                 <MedalStarAlt fill='#FFDB63' />
-                <span className='text-white/90 text-sm 2xl:text-base font-light'>10+ Years of Reliable Airport Transfers</span>
+                <span className='text-white/90 text-sm 2xl:text-base font-light'>Trusted Choice of UK Travellers</span>
             </div>
-            <h1 ref={headingRef} className='text-white text-[41px] sm:text-5xl lg:text-[54px] xl:text-6xl 2xl:text-7xl font-medium tracking-tighter text-center leading-14 lg:leading-17 xl:leading-19 2xl:leading-22 max-w-125 sm:max-w-170 xl:max-w-190 2xl:max-w-220'><span className='text-yellow'>Bright Travel </span>Solutions for Transport Across the UK</h1>
-            <p ref={textRef} className='text-base 2xl:text-lg text-white/85 text-center font-light max-w-110 2xl:max-w-140'>Comfortable and reliable transport across the UK with clear pricing and 24/7 service</p>
+            <h1 ref={headingRef} className='text-white text-[37px] sm:text-5xl lg:text-[54px] xl:text-6xl 2xl:text-7xl font-medium tracking-tighter text-center leading-13 sm:leading-15 lg:leading-17 xl:leading-19 2xl:leading-22 max-w-125 sm:max-w-170 xl:max-w-190 2xl:max-w-220'><span className='text-yellow'>Bright Travel Solutions </span>for Transport Across the UK</h1>
+            <p ref={textRef} className='text-base 2xl:text-lg text-white/85 text-center font-light max-w-110'>Comfortable and reliable transport across the UK with clear pricing and 24/7 service</p>
             <div className='w-full flex flex-col md:flex-row justify-center items-center mt-3 lg:mt-6 gap-9'>
                 <div ref={buttonRef}>
 

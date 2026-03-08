@@ -30,14 +30,14 @@ const Footer = () => {
     ];
     return (
         <footer className='w-full pt-13 bg-neutral-900 font-dm-sans'>
-            <div className='w-[90%] max-w-350 mx-auto flex flex-col md:flex-row justify-start gap-15 md:gap-0 md:justify-between items-center md:items-start'>
+            <div className='w-[90%] max-w-350 mx-auto flex flex-col md:flex-row justify-start gap-15 md:gap-0 md:justify-between items-start'>
                 <div>
-                    <div className='flex justify-center md:justify-start items-center gap-5 mb-5'>
+                    <div className='flex justify-start items-center gap-5 mb-5'>
                         <Image src={Logo} width={60} height={60} alt='BtsTaxi Logo' />
                         <h2 className='text-white text-[38px] sm:text-[44px] lg:text-[49px] xl:text-55xl font-bold tracking-tighter'>BTSCARS</h2>
                     </div>
-                    <p className='text-base 2xl:text-lg text-white/65 text-center md:text-left font-light max-w-80'>Your trusted choice for reliable transport across the UK whenever you travel</p>
-                    <div className='flex flex-col justify-start items-center md:items-start gap-5 mt-8'>
+                    <p className='text-base 2xl:text-lg text-white/65 text-left font-light max-w-80'>Your trusted choice for reliable transport across the UK whenever you travel</p>
+                    <div className='flex flex-col justify-start items-start gap-5 mt-8'>
                         {contacts.map((contact, index) => {
                             const IconComponent = contact.icon;
                             return (
@@ -57,8 +57,8 @@ const Footer = () => {
                         })}
                     </div>
                 </div>
-                <div className='w-full flex justify-center md:justify-between md:pl-40 md:pt-10 items-start gap-12'>
-                    <div className='flex flex-col justify-start items-center md:items-start gap-5'>
+                <div className='w-full flex px-2 md:px-0 justify-between md:pl-40 md:pt-10 items-start gap-12'>
+                    <div className='flex flex-col justify-start items-start gap-5'>
                         <span className='text-white/80 tracking-tight text-base 2xl:text-lg hover:text-white font-medium'>Navigation</span>
                         {navLinks.map((link, index) => (
                             <a key={index} href={link.href} onClick={(e) => handleSmoothScroll(e, link.href)} className='text-white/50 tracking-tight text-sm cursor-pointer 2xl:text-base hover:text-white'>
@@ -66,7 +66,7 @@ const Footer = () => {
                             </a>
                         ))}
                     </div>
-                    <div className='flex flex-col justify-start items-center md:items-start gap-5'>
+                    <div className='flex flex-col justify-start items-start gap-5'>
                         <span className='text-white/80 tracking-tight text-base 2xl:text-lg hover:text-white font-medium'>Legals</span>
                         {legalLinks.map((link, index) => (
                             <Link key={index} href={link.href} className='text-white/50 tracking-tight text-sm cursor-pointer 2xl:text-base hover:text-white'>
