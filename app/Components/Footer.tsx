@@ -2,10 +2,13 @@
 import { Envelope, Mobile, Phone, Telegram } from '@boxicons/react'
 import Image from 'next/image'
 import Logo from "@/public/Images/logo.svg";
-import { navLinks, handleSmoothScroll } from './NavData';
+import { navLinks } from './NavData';
+import { usePathname, useRouter } from "next/navigation";
 import Link from 'next/link';
 
 const Footer = () => {
+    const router = useRouter();
+    const pathname = usePathname();
     const legalLinks = [
         { name: "Privacy Policy", href: "/privacy-policy" },
         { name: "Terms & Conditions", href: "/terms-of-use" },
@@ -64,9 +67,33 @@ const Footer = () => {
                     <div className='flex flex-col justify-start items-start gap-5'>
                         <span className='text-white/80 tracking-tight text-base 2xl:text-lg hover:text-white font-medium'>Navigation</span>
                         {navLinks.map((link, index) => (
-                            <a key={index} href={link.href} onClick={(e) => handleSmoothScroll(e, link.href)} className='text-white/50 tracking-tight text-sm cursor-pointer 2xl:text-base hover:text-white'>
+                            <Link key={index}
+                                href={`/#${link.href.replace("#", "")}`}
+                                onClick={async (e) => {
+                                    e.preventDefault();
+
+                                    if (pathname === "/") {
+                                        // already on home → smooth scroll immediately
+                                        const el = document.getElementById(link.href.replace("#", ""));
+                                        if (el) {
+                                            const top = el.getBoundingClientRect().top + window.pageYOffset - 100;
+                                            window.scrollTo({ top, behavior: "smooth" });
+                                        }
+                                    } else {
+                                        // on another page → navigate first
+                                        router.push(`/#${link.href.replace("#", "")}`);
+                                        // wait for next tick for element to exist
+                                        setTimeout(() => {
+                                            const el = document.getElementById(link.href.replace("#", ""));
+                                            if (el) {
+                                                const top = el.getBoundingClientRect().top + window.pageYOffset - 100;
+                                                window.scrollTo({ top, behavior: "smooth" });
+                                            }
+                                        }, 100); // adjust delay if needed
+                                    }
+                                }} className='text-white/50 tracking-tight text-sm cursor-pointer 2xl:text-base hover:text-white'>
                                 {link.name}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                     <div className='flex flex-col justify-start items-start gap-5'>

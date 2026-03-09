@@ -1,7 +1,6 @@
 
 import Button from './Components/Button'
 import Benefits from "./Components/Benefits";
-// import Cars from "./Components/Fleet";
 import CTA from "./Components/CTA";
 import FAQ from "./Components/FAQ";
 import Footer from "./Components/Footer";

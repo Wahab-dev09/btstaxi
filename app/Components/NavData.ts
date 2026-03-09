@@ -10,15 +10,3 @@ export const navLinks: NavLink[] = [
   { name: "Why Us", href: "#benefits" },
   { name: "Reviews", href: "#reviews" },
 ];
-
-export const handleSmoothScroll = (
-  e: React.MouseEvent<HTMLAnchorElement>,
-  href: string
-) => {
-  e.preventDefault();
-  const target = document.querySelector(href);
-  if (target) {
-    const top = target.getBoundingClientRect().top + window.pageYOffset - 100;
-    window.scrollTo({ top, behavior: "smooth" });
-  }
-};
