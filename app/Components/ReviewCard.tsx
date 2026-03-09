@@ -16,23 +16,23 @@ interface ReviewCardProps {
 }
 
 export default function ReviewCard({ item }: ReviewCardProps) {
+  const getInitials = (name: string) => {
+    const words = name.split(" ");
+    return words
+      .slice(0, 2)
+      .map((word) => word[0])
+      .join("")
+      .toUpperCase();
+  };
   return (
     <div
-      className="
-  w-full h-65
-  bg-neutral-900 text-white rounded-2xl
-  p-6 shadow
-  hover:shadow-lg transition
-  flex flex-col justify-between items-start
-"
-    >
+      className=" w-full h-65 bg-neutral-900 text-white rounded-2xl p-6 shadow hover:shadow-lg transition flex flex-col justify-between items-start">
       {/* Top */}
       <div className="flex items-center gap-3">
-        <img
-          src={item.avatar}
-          alt={item.name}
-          className="w-12 h-12 rounded-full border border-white/10"
-        />
+        <div
+          className="w-9.5 h-9.5 rounded-full bg-yellow text-neutral-800 flex items-center justify-center font-semibold border border-white/10 text-sm" >
+          {getInitials(item.name)}
+        </div>
         <div>
           <p className="font-medium text-base 2xl:text-lg">
             {item.name}

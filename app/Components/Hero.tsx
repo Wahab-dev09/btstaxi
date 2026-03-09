@@ -29,31 +29,31 @@ const Hero = () => {
     const buttonRef = useRef<HTMLDivElement>(null);
     const starsRef = useRef<HTMLDivElement>(null);
 
-useEffect(() => {
-    // Reset all elements to their initial state first
-    gsap.set([headingRef.current, textRef.current, buttonRef.current], {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        clearProps: "all"
-    })
+    useEffect(() => {
+        // Reset all elements to their initial state first
+        gsap.set([headingRef.current, textRef.current, buttonRef.current], {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            clearProps: "all"
+        })
 
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.1 });
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.1 });
 
-    tl.from(headingRef.current, {
-        y: 60,
-        opacity: 0,
-        duration: 0.9,
-    })
-        .from(textRef.current, { y: 40, opacity: 0, duration: 0.8 }, "-=0.6")
-        .from(buttonRef.current, { y: 30, opacity: 0, scale: 0.98, duration: 0.5 }, "-=0.5")
-        .from(gsap.utils.toArray(starsRef.current?.children ?? []),
-            { opacity: 0, scale: 0.5, stagger: 0.12, duration: 0.3 });
+        tl.from(headingRef.current, {
+            y: 60,
+            opacity: 0,
+            duration: 0.9,
+        })
+            .from(textRef.current, { y: 40, opacity: 0, duration: 0.8 }, "-=0.6")
+            .from(buttonRef.current, { y: 30, opacity: 0, scale: 0.98, duration: 0.5 }, "-=0.5")
+            .from(gsap.utils.toArray(starsRef.current?.children ?? []),
+                { opacity: 0, scale: 0.5, stagger: 0.12, duration: 0.3 });
 
-    return () => {
-        tl.kill()
-    }
-}, []);
+        return () => {
+            tl.kill()
+        }
+    }, []);
     return (
         <section className='w-full relative bg-neutral-900 pb-15 lg:pb-18 flex flex-col justify-start items-center px-3 gap-5 xl:gap-6 pt-40'>
             <div className='w-fit bg-white/2 px-5 rounded-full py-2.5 border border-white/5 flex justify-center items-center gap-3 lg:mb-2'>

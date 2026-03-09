@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../theme';
+
+// const roboto = Roboto({
+//   weight: ['300', '400', '500', '700'],
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-roboto',
+// });
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -19,9 +29,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${dmSans.variable} antialiased`}>
-        {children}
+     <html lang="en" className={dmSans.variable}>
+      <body>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+
+            {children}
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

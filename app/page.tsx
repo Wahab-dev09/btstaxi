@@ -1,7 +1,7 @@
 
 import Button from './Components/Button'
 import Benefits from "./Components/Benefits";
-import Cars from "./Components/Cars";
+// import Cars from "./Components/Fleet";
 import CTA from "./Components/CTA";
 import FAQ from "./Components/FAQ";
 import Footer from "./Components/Footer";
@@ -11,6 +11,7 @@ import Navbar from "./Components/Navbar";
 import Process from "./Components/Process";
 
 import Reviews from "./Components/Reviews";
+import Fleet from './Components/Fleet';
 
 export default function Home() {
 
@@ -20,7 +21,7 @@ export default function Home() {
       <Hero />
       <Reviews />
       <Process />
-      <Cars />
+      <Fleet/>
       <Benefits />
       <Locations />
       <CTA />

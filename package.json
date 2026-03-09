@@ -10,6 +10,13 @@
   },
   "dependencies": {
     "@boxicons/react": "^1.0.3",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.9",
+    "@mui/material-nextjs": "^7.3.9",
+    "@mui/x-date-pickers": "^8.27.2",
+    "dayjs": "^1.11.19",
     "gsap": "^3.14.2",
     "next": "16.1.6",
     "react": "19.2.3",

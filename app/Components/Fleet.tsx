@@ -1,7 +1,7 @@
 import React from 'react'
 import CarsCarousel from './CarsCarousel'
 
-const Cars = () => {
+const Fleet = () => {
   return (
         <section className="w-full overflow-x-clip py-12 lg:py-15 bg-white font-dm-sans relative">
             <div className="max-w-360 mx-auto px-3 relative">
@@ -19,4 +19,4 @@ const Cars = () => {
   )
 }
 
-export default Cars
+export default Fleet

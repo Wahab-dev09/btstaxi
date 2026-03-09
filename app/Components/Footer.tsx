@@ -15,7 +15,7 @@ const Footer = () => {
         {
             type: "Email",
             icon: Envelope,
-            value: "contact@airporttransfer.com",
+            value: "btsminicabs@gmail.com",
             link: "https://mail.google.com/mail/?view=cm&fs=1&to=btsminicabs@gmail.com",
         },
         {
@@ -34,7 +34,7 @@ const Footer = () => {
     return (
         <footer className='w-full pt-13 bg-neutral-900 font-dm-sans'>
             <div className='w-[90%] max-w-350 mx-auto flex flex-col md:flex-row justify-start gap-15 md:gap-0 md:justify-between items-start'>
-                <div>
+                <div className='w-full max-w-75 2xl:max-w-85'>
                     <div className='flex justify-start items-center gap-5 mb-5'>
                         <Image src={Logo} width={60} height={60} alt='BtsTaxi Logo' />
                         <h2 className='text-white text-[38px] sm:text-[44px] lg:text-[49px] xl:text-55xl font-bold tracking-tighter'>BTSCARS</h2>
